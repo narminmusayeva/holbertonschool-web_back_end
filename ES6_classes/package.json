@@ -1,10 +1,11 @@
 {
   "name": "es6_classes",
   "version": "1.0.0",
-  "description": "THis project is about web back end.",
+  "description": "This project is about web back end.",
   "main": "0-classroom.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
