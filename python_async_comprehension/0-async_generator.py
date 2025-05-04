@@ -1,11 +1,18 @@
-#!/usr/bin/env python3
-"""Defines an asynchronous coroutine"""
+"""This module contains async_generator() function"""
 import asyncio
 import random
+from typing import Generator
 
 
-async def wait_random(max_delay: int = 10) -> float:
-    """Waits for a random delay between 0 and max_delay"""
-    random_number = random.uniform(0, max_delay)
-    await asyncio.sleep(random_number)
-    return random_number
+async def async_generator() -> Generator[float, None, None]:
+    """
+           Generate numbers
+           Args:
+               void
+
+           Return:
+                float numbers
+    """
+    for _ in range(10):
+        await asyncio.sleep(1)
+        yield random.uniform(0, 10)
